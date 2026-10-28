@@ -4,6 +4,8 @@
 
 Reusable configuration packages for consistent frontend and TypeScript engineering across projects. Each npm package is independently versioned and published from its own directory under `packages/`.
 
+**External reference:** The repository is [included in the XERJ Corpus Hub](https://hub.xerj.org/contributors/DiogoCastroSilva) as an example for AI coding agents, including its ESLint configuration and tests.
+
 ## Packages
 
 | Package | Version | Purpose | Documentation |
