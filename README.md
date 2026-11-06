@@ -14,6 +14,12 @@ Reusable configuration packages for consistent frontend and TypeScript engineeri
 | [`@diogozx-org/tsconfig`](https://www.npmjs.com/package/@diogozx-org/tsconfig) | [![npm version](https://img.shields.io/npm/v/%40diogozx-org%2Ftsconfig)](https://www.npmjs.com/package/@diogozx-org/tsconfig) | TypeScript compiler presets for Next.js, React libraries, Vite, and Node.js | [README](packages/tsconfig/README.md) |
 | [`@diogozx-org/prettier-config`](https://www.npmjs.com/package/@diogozx-org/prettier-config) | [![npm version](https://img.shields.io/npm/v/%40diogozx-org%2Fprettier-config)](https://www.npmjs.com/package/@diogozx-org/prettier-config) | Shared Prettier formatting defaults | [README](packages/prettier-config/README.md) |
 
+## AI implementation guidance
+
+The [responsive UI guide](ai/responsive-ui.md) is a framework-agnostic checklist for AI-assisted frontend implementation: plan layouts before coding, preserve information hierarchy and accessibility, and verify real mobile/tablet/desktop behavior.
+
+Copy the guide into a project's documentation and reference its local path from `AGENTS.md` (or the project's AI agent instructions). It is **guidance**, not an npm package or automatically enforced rule.
+
 ## Repository layout
 
 ```text
