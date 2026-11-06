@@ -30,6 +30,8 @@ frontend-tooling/
 │       ├── performance-audit.yml
 │       ├── publish.yml
 │       └── publish-config-packages.yml
+├── ai/
+│   └── responsive-ui.md
 ├── packages/
 │   ├── eslint-config/
 │   ├── prettier-config/
