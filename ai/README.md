@@ -10,9 +10,11 @@ scheduler, ticket integration, or application framework.
   requirements, bugs, refactors, and roadmap items into testable product
   specifications.
 
-The requested `ai/responsive-ui.md` guidance does not exist in this repository;
-`spec-task` therefore does not claim to inherit responsive-UI rules from it.
-Target repositories remain responsible for their own product and design-system
+The optional [`responsive-ui.md`](responsive-ui.md) guide contains
+framework-agnostic implementation and verification guidance. `spec-task` may
+use relevant local guidance when inspecting a target repository, but does not
+force responsive-UI requirements onto tasks where they do not apply. Target
+repositories remain responsible for their own product and design-system
 conventions.
 
 ## Workflow handoff
