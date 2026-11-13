@@ -46,11 +46,15 @@ and make regression coverage part of the contract.
 5. **Ask focused questions when needed.** Ask only the smallest set of
    decisions that materially changes behavior, risk, scope, or verification.
    Explain why each answer matters. Continue refinement when the user answers.
-6. **Write the contract.** Use [assets/spec-template.md](assets/spec-template.md)
+6. **Define validation.** For each applicable acceptance criterion and material
+   risk, choose the least costly sufficient validation method and record the
+   evidence required for completion. Specify what must be executed later, not
+   what this skill executed.
+7. **Write the contract.** Use [assets/spec-template.md](assets/spec-template.md)
    and stable acceptance-criteria IDs such as `AC-001`, `AC-002`. Preserve
    existing IDs when revising an existing spec; do not renumber criteria merely
    to improve ordering.
-7. **Set readiness honestly.** Use exactly one status: `Draft`, `Product-ready`,
+8. **Set readiness honestly.** Use exactly one status: `Draft`, `Product-ready`,
    or `Repository-validated`.
 
 ## Completeness review
@@ -70,6 +74,31 @@ Capture, when applicable:
 An acceptance criterion should say what an observer can verify, under what
 condition, and what result must occur. Avoid criteria such as “works well” or
 “is user-friendly.”
+
+### Validation strategy
+
+Add a `Validation Strategy` section to every contract. Map each applicable
+acceptance criterion and material risk to the least costly sufficient evidence:
+
+- test level: unit, component, integration, E2E, or manual;
+- whether real-browser verification is needed;
+- responsive applicability and representative viewports, honoring any
+  user-supplied supported-device requirements;
+- accessibility scans, keyboard operation, focus behavior, zoom/reflow, and
+  manual screen-reader checks when relevant;
+- explicit UI states: loading, empty, error, validation, success, and disabled;
+- screenshots, visual baselines, or human/agent visual inspection;
+- performance, security, persistence, concurrency, and browser compatibility;
+  and
+- the evidence that must exist before the feature can be declared complete.
+
+Use `Not applicable` with a reason when a method does not fit. If a
+user supplied an accessibility, browser, or supported-device requirement,
+preserve it in the acceptance criteria and validation strategy. If a
+consequential requirement is unspecified, ask a focused question or record the
+uncertainty; do not invent a requirement.
+The section defines future validation only. Never claim that tests, browser
+checks, screenshots, or scans were executed at the specification step.
 
 ### UX and frontend
 
@@ -160,6 +189,10 @@ assumptions, and verification expectations without changing product intent.
 `review-change` and `security-review` should use the same acceptance IDs as
 traceability anchors. They remain independent: `spec-task` does not approve
 code, certify security, mark work passing, or reconcile repository state.
+
+The validation strategy is the handoff for the later implementation and
+verification phases: implementers should add the required checks, and
+verifiers should record the actual commands, environments, and evidence.
 
 For the exact output shape, use [assets/spec-template.md](assets/spec-template.md).
 For deterministic examples and local validation, see

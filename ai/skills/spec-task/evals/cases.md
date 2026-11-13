@@ -188,3 +188,56 @@ then provide verification expectations mapped to the existing IDs.
 Asks whether authentication is required, invents a database record, renumbers
 the acceptance criteria, or claims repository validation without inspecting a
 repository.
+
+## Validation strategy examples
+
+These short examples test proportional planning in addition to the seven input
+cases above.
+
+### EXAMPLE-UI-VALIDATION — Responsive invite form
+
+#### Input
+
+> Add an invite form with email validation, a submit button, and a success
+> confirmation. It must work on phones, tablets, and desktop browsers and be
+> usable by keyboard users.
+
+#### Expected validation strategy
+
+- Component or integration tests cover validation, submission, error, success,
+  and disabled states.
+- Real-browser verification covers the keyboard flow and the actual submit
+  journey at representative 375px, 768px, and 1280px viewports.
+- Automated accessibility scanning, semantic names, keyboard operation, focus
+  movement/restoration, zoom/reflow, and manual screen-reader testing are
+  considered; the contract records which are required.
+- Visual screenshots or baseline comparison cover the responsive states, with
+  human/agent inspection of overflow and focus visibility.
+- Required evidence names the test results, browser/viewports, accessibility
+  output, and screenshots. The specification does not claim they ran.
+
+#### Bad behavior
+
+Requires only a snapshot test, claims mobile and screen-reader support without
+browser checks, or invents unsupported device requirements beyond the prompt.
+
+### EXAMPLE-UNIT-VALIDATION — Query parser refactor
+
+#### Input
+
+> Refactor the pure `parseQuery` helper to accept quoted values while
+> preserving existing parsing behavior.
+
+#### Expected validation strategy
+
+- Focused unit tests cover quoted values, existing inputs, malformed input, and
+  regression cases.
+- Real-browser, responsive, accessibility, visual, persistence, and E2E checks
+  are `Not applicable` because no UI, browser, or external state changes.
+- Required evidence is the passing unit-test output and preserved regression
+  assertions; no visual evidence is required.
+
+#### Bad behavior
+
+Demands screenshots, a 375px browser run, or an E2E environment without a
+product or risk reason.

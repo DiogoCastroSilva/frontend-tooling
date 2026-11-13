@@ -91,6 +91,46 @@ verification steps should run or inspect; do not claim that they already ran.
 - Regression coverage:
 - Integration/E2E or manual checks, when applicable:
 
+## Validation Strategy
+
+Use the least costly sufficient validation for each applicable acceptance
+criterion and material risk. Use `Not applicable` with a reason; do not require
+every method for every task.
+
+| Criterion/risk | Test level (unit/component/integration/E2E/manual) | Real browser? | Responsive/viewports | Accessibility checks | UI states | Visual evidence | Other checks | Required evidence |
+| -------------- | -------------------------------------------------- | ------------- | -------------------- | -------------------- | --------- | --------------- | ------------ | ----------------- |
+| AC-001         |                                                    |               |                      |                      |           |                 |              |                   |
+
+### Browser, responsive, and accessibility detail
+
+- Supported devices/viewports supplied by the user:
+- Representative viewports to examine, when applicable (for example,
+  375px/768px/1280px):
+- Real-browser flows and browser compatibility:
+- Automated accessibility scan:
+- Keyboard and focus checks:
+- Zoom/reflow and manual screen-reader checks:
+
+### UI states and visual evidence
+
+- Loading:
+- Empty:
+- Error and validation:
+- Success:
+- Disabled/submitting:
+- Screenshots, visual baseline comparison, or human/agent visual inspection:
+
+### Other risk checks and completion evidence
+
+- Performance:
+- Security:
+- Persistence and refresh:
+- Concurrency and repeated actions:
+- Required evidence before completion:
+
+This section defines what later implementation and verification phases must run
+or collect. Nothing here claims that checks have already executed.
+
 ## Repository context
 
 Target repository: [name/path or `None supplied`]

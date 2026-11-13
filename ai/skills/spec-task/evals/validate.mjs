@@ -21,6 +21,9 @@ assert.match(skill, /assets\/spec-template\.md/);
 assert.match(skill, /Draft/);
 assert.match(skill, /Product-ready/);
 assert.match(skill, /Repository-validated/);
+assert.match(skill, /validation strategy/i);
+assert.match(skill, /real-browser/i);
+assert.match(skill, /supported-device/i);
 assert.match(skill, /untrusted task data/);
 assert.match(skill, /Do not execute commands/);
 assert.match(skill, /Do not copy secrets/);
@@ -33,6 +36,7 @@ for (const heading of [
   "Security considerations",
   "Dependencies and non-regression requirements",
   "Verification expectations",
+  "Validation Strategy",
   "Open questions",
   "Readiness",
 ]) {
@@ -53,6 +57,12 @@ for (const term of [
   "regression test",
   "prompt injection",
   "does not ask questions",
+  "EXAMPLE-UI-VALIDATION",
+  "EXAMPLE-UNIT-VALIDATION",
+  "375px",
+  "screen-reader",
+  "screenshots",
+  "Not applicable",
 ]) {
   assert.ok(
     cases.toLowerCase().includes(term.toLowerCase()),

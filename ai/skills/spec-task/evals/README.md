@@ -24,7 +24,10 @@ answer.
 3. Compare the response with the good/bad signals for that case.
 4. For cases with material ambiguity, verify that the status is `Draft` and the
    questions explain why the decisions matter.
-5. For a complete spec, verify that the agent does not ask redundant questions.
+5. Check that the `Validation Strategy` maps applicable criteria and risks to
+   proportionate test levels, browser/responsive/accessibility/visual checks,
+   and required evidence without claiming execution.
+6. For a complete spec, verify that the agent does not ask redundant questions.
 
 The evaluation cases are intentionally small. Add a case only when it exposes a
 repeatable quality or safety failure; do not turn this directory into a second
