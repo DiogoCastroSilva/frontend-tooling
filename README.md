@@ -22,6 +22,8 @@ frontend-tooling/
 │       ├── performance-audit.yml
 │       ├── publish.yml
 │       └── publish-config-packages.yml
+├── ai/
+│   └── skills/spec-task/
 ├── packages/
 │   ├── eslint-config/
 │   ├── prettier-config/
@@ -32,6 +34,25 @@ frontend-tooling/
 ```
 
 The root `package.json` defines the npm workspace and scripts for testing every package. Each directory under `packages/` contains its own publishable package manifest, implementation, tests, and package README.
+
+## Reusable AI specification skill
+
+The repository also contains a portable, dependency-free `spec-task` Agent
+Skill under [`ai/skills/spec-task/`](ai/skills/spec-task/). It turns ideas,
+requirements, bug reports, refactors, and roadmap items into Markdown task
+contracts with stable acceptance criteria, conditional UX/security review,
+explicit assumptions, and honest readiness states. It does not execute
+commands, modify application code, or claim implementation/security
+verification.
+
+Run its deterministic structural evaluation with:
+
+```sh
+npm run test:spec-task
+```
+
+See [`ai/README.md`](ai/README.md) for the handoff boundary to future
+`implement-task`, `review-change`, and `security-review` skills.
 
 ## Development
 
